@@ -23,7 +23,7 @@ def write_all_file_links_to_index():
             index.write("[{0} Notes for {1}]({2})\n\n".format(class_, noteName, file))
 
 def write_accordioning():
-    with open("_includes/accordions.html", "w") as index:
+    with open("_includes/subjects.html", "w") as index:
         for root, dirs, files in os.walk("."):
             for dir_ in dirs:
                 full = os.path.join(root, dir_)
@@ -39,5 +39,5 @@ def write_accordioning():
                             tag += '<li><a href="{0}">{1} notes for {2}</a></li>'.format(full, class_, for_)
                     tag += '</ul></div>'
                     index.write(tag + "\n")
-write_accordioning()                  
+write_accordioning()
 # write_all_file_links_to_index()
