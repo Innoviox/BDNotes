@@ -8,6 +8,13 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ '/sass/accordion.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script>
+    $("#submit").onclick(function(e) {
+        console.log(e)
+    });
+    </script>
 </head>
 
 <body>
@@ -17,7 +24,7 @@
     </header>
 
     <main id="content" class="main-content" role="main">
-        <form>
+        <form class="form">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" />
             <label for="files">Submit Files</label>
@@ -27,7 +34,7 @@
             <label for="name">For Lesson:</label>
             <input type="text" id="lesson" name="lesson" />
             <br>
-            <input type="submit">Submit</input>
+            <input type="submit" id="submit">Submit</input>
         </form>
         <footer class="site-footer">
             <div class="site-footer-owner">Owned and maintained by members of the <a href="https://discord.gg/RVR98UW">Blair Discord</a>.</div>
